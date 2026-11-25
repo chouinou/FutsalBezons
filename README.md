@@ -4,13 +4,13 @@
 ASBF est l'application qui va simplifier la gestion de l’Association Sportive  Futsal de Bezons (AS Besons Futsal). Elle centralise tous les outils en un seul lieu et permet à chaque acteur de l’association de retrouver les informations et outils qui le concerne.
 
 ## Product Goal
-Contrairement à l'approche un peu archaïque sur laquelle repose la gestion de l'AS Bezons Futsal; C'est-à-dire, la gestion d'environ 300 adhérents (des enfants dès 6 ans jusqu'aux seniors) avec une quinzaine d'équipes, les incriptions, les autorisations parentales et en plus les convocation aux match, l'association bien que gérée par des bénévoles peine à suivre de façon raisonable le côté administratif du travail. L'application **ASBF** a donc pour but de résoudre ces problemes tout en respectant leurs contraintes budgetaires.
+Gérer l'association AS Futsal Bezons devient difficile. cela implique la gestion d'environ 300 adhérents (des enfants dès 6 ans jusqu'aux seniors) avec une quinzaine d'équipes, les inscriptions, les autorisations parentales et les convocation aux différents événements du quotidien (entraînement, match..). L'association est gérée par des bénévoles et peine à suivre de façon raisonnable les données administratifs de tous ces adhérents. L'application **ASBF** a donc pour but de résoudre ces problèmes tout en respectant leurs contraintes budgetaires.
 
 ## Rôles de l'équipe
 
 | Membre | Compte GitHub | Rôle |
 |---|---|---|
-| Max | [@compte]() | Product Owner & Developer |
+| Max | [@compte](https://github.com/DrCodx) | Product Owner & Developer |
 | Romain | [@chouinou](https://github.com/chouinou) | Scrum Master & Developer |
 | Paul | [@compte]() | Developer |
 | Ivan | [@ivanraphei](https://github.com/ivanraphei) | Developer |
@@ -19,9 +19,11 @@ Contrairement à l'approche un peu archaïque sur laquelle repose la gestion de 
 ## Definition of Done
 
 Un élément est terminé quand :
-
-- [ ] Exemple de trucs
-- [ ] Exemple de trucs
+- [ ] Le scrum master et le lead dev de la story valident le code avant de merge
+- [ ] Les règles de validation d’un formulaire sont dans l’entité et dans le formulaire
+- [ ] L'écran doit correspondre au tant que possible à a maquette
+- [ ] L’affichage est vérifié, d’abord sur téléphone puis sur ordinateur
+- [ ] Le product owner vérifie que la feature résout bien la story avant de passer la carte en done
 
 ## Suivi et conception
 
@@ -53,7 +55,7 @@ symfony check:requirements
 ### Première installation
 
 ```bash
-git https://github.com/chouinou/FutsalBezons
+git clone https://github.com/chouinou/FutsalBezons
 cd FutsalBezons
 composer install
 php bin/console doctrine:migrations:migrate
