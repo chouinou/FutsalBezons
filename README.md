@@ -1,28 +1,29 @@
-# [Nom du produit]
-
+# ASBF
 
 ## Vision
-
+ASBF est l'application qui va simplifier la gestion de l’Association Sportive  Futsal de Bezons (AS Besons Futsal). Elle centralise tous les outils en un seul lieu et permet à chaque acteur de l’association de retrouver les informations et outils qui le concerne.
 
 ## Product Goal
-
+Gérer l'association AS Futsal Bezons devient difficile. cela implique la gestion d'environ 300 adhérents (des enfants dès 6 ans jusqu'aux seniors) avec une quinzaine d'équipes, les inscriptions, les autorisations parentales et les convocation aux différents événements du quotidien (entraînement, match..). L'association est gérée par des bénévoles et peine à suivre de façon raisonnable les données administratifs de tous ces adhérents. L'application **ASBF** a donc pour but de résoudre ces problèmes tout en respectant leurs contraintes budgetaires.
 
 ## Rôles de l'équipe
 
 | Membre | Compte GitHub | Rôle |
 |---|---|---|
-| Max | [@compte] | [Product Owner] |
-| Romain | [@compte] | [Scrum Master] |
-| Paul | [@compte] | [Developer] |
-| Ivan | [@compte] | [Developer] |
+| Max | [@compte](https://github.com/DrCodx) | Product Owner & Developer |
+| Romain | [@chouinou](https://github.com/chouinou) | Scrum Master & Developer |
+| Paul | [@compte]() | Developer |
+| Ivan | [@ivanraphei](https://github.com/ivanraphei) | Developer |
 
 
 ## Definition of Done
 
 Un élément est terminé quand :
-
-- [ ] Exemple de trucs
-- [ ] Exemple de trucs
+- [ ] Le scrum master et le lead dev de la story valident le code avant de merge
+- [ ] Les règles de validation d’un formulaire sont dans l’entité et dans le formulaire
+- [ ] L'écran doit correspondre au tant que possible à a maquette
+- [ ] L’affichage est vérifié, d’abord sur téléphone puis sur ordinateur
+- [ ] Le product owner vérifie que la feature résout bien la story avant de passer la carte en done
 
 ## Suivi et conception
 
@@ -32,6 +33,8 @@ Un élément est terminé quand :
 
 ## Modèle de données
 
+### MLD
+![alt text](/other/mld.png)
 
 ## Installation et lancement
 
