@@ -52,7 +52,7 @@ symfony check:requirements
 ### Première installation
 
 ```bash
-git https://github.com/chouinou/FutsalBezons
+git clone https://github.com/chouinou/FutsalBezons
 cd FutsalBezons
 composer install
 php bin/console doctrine:migrations:migrate
