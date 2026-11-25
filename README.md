@@ -1,20 +1,19 @@
-# [Nom du produit]
-
+# ASBF
 
 ## Vision
-
+ASBF est l'application qui va simplifier la gestion de l’Association Sportive  Futsal de Bezons (AS Besons Futsal). Elle centralise tous les outils en un seul lieu et permet à chaque acteur de l’association de retrouver les informations et outils qui le concerne.
 
 ## Product Goal
-
+Contrairement à l'approche un peu archaïque sur laquelle repose la gestion de l'AS Bezons Futsal; C'est-à-dire, la gestion d'environ 300 adhérents (des enfants dès 6 ans jusqu'aux seniors) avec une quinzaine d'équipes, les incriptions, les autorisations parentales et en plus les convocation aux match, l'association bien que gérée par des bénévoles peine à suivre de façon raisonable le côté administratif du travail. L'application **ASBF** a donc pour but de résoudre ces problemes tout en respectant leurs contraintes budgetaires.
 
 ## Rôles de l'équipe
 
 | Membre | Compte GitHub | Rôle |
 |---|---|---|
-| Max | [@compte] | [Product Owner] |
-| Romain | [@compte] | [Scrum Master] |
-| Paul | [@compte] | [Developer] |
-| Ivan | [@compte] | [Developer] |
+| Max | [@compte]() | Product Owner & Developer |
+| Romain | [@chouinou](https://github.com/chouinou) | Scrum Master & Developer |
+| Paul | [@compte]() | Developer |
+| Ivan | [@ivanraphei](https://github.com/ivanraphei) | Developer |
 
 
 ## Definition of Done
@@ -32,6 +31,8 @@ Un élément est terminé quand :
 
 ## Modèle de données
 
+### MLD
+![alt text](/other/mld.png)
 
 ## Installation et lancement
 
