@@ -40,7 +40,7 @@ class Events
     #[ORM\JoinColumn(nullable: false)]
     private ?Users $created_by = null;
 
-    #[ORM\ManyToOne(inversedBy: 'events')]
+    #[ORM\ManyToOne]
     private ?Users $updated_by = null;
 
     public function getId(): ?int
