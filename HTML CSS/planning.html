@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Planning | AS Bezons Futsal</title>
+    <link rel="icon" href="assets/bezons-futsal-ball.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="member-page">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="tableau-de-bord.html">
+                <img src="assets/bezons-futsal-ball.svg" alt="" width="36" height="36">
+                <span>AS Bezons Futsal</span>
+            </a>
+            <details class="site-menu">
+                <summary aria-label="Menu">
+                    <span class="menu-icon" aria-hidden="true"><span></span></span>
+                </summary>
+                <nav class="menu-panel" aria-label="Autres pages">
+                    <a href="adhesion.html">Mon adhésion</a>
+                    <a href="cotisations.html">Cotisations</a>
+                    <a href="coach.html">Espace coach</a>
+                    <a href="administration.html">Administration</a>
+                    <a href="index.html">Se déconnecter</a>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <main id="contenu" class="container page app-page" tabindex="-1">
+        <header class="planning-heading stack stack--tight">
+                <div class="row">
+                    <p class="kicker">Saison 2024 / 2025</p>
+                    <span class="badge badge--blue">4 rendez-vous</span>
+                </div>
+                <h1>Planning des événements</h1>
+                <p class="muted">Retrouvez les séances sur parquet et les rencontres officielles du club.</p>
+            </header>
+            <div class="filter filter--agenda" role="group" aria-label="Filtrer les événements">
+                <input class="filter-input" id="agenda-all" type="radio" name="agenda" value="all" checked> <input class="filter-input" id="agenda-training" type="radio" name="agenda" value="training"> <input class="filter-input" id="agenda-match" type="radio" name="agenda" value="match">
+                <div class="filter-tabs"><label for="agenda-all">Tous <span class="tab-count">4</span></label> <label for="agenda-training"><img class="icon" src="assets/training.svg" alt="" width="18" height="18"> Entraînements</label> <label for="agenda-match"><img class="icon" src="assets/ball.svg" alt="" width="18" height="18"> Matchs</label></div>
+                <ul class="app-list agenda-list"><li class="agenda-event agenda-event--training" id="collectif">
+                <article class="card app-card app-card--flush">
+                    <div class="card-content stack stack--tight">
+                        <div class="row">
+                            <span class="badge badge--blue icon-line"><img class="icon" src="assets/planning-training.svg" alt="" width="18" height="18"> Entraînement</span>
+                            <span class="badge badge--success icon-line"><img class="icon" src="assets/confirmed.svg" alt="" width="18" height="18"> Confirmé</span>
+                        </div>
+                        <h2>Seniors 1</h2>
+                        <p class="icon-line text-blue"><img class="icon" src="assets/date.svg" alt="" width="18" height="18"><span><time datetime="2024-10-24T20:00">Jeudi 24 octobre · 20 h – 22 h</time></span></p>
+                        <p class="icon-line muted"><img class="icon" src="assets/event-pin.svg" alt="" width="18" height="18"><span>Gymnase Jean Moulin, Bezons</span></p>
+                    </div>
+                    <details class="card-details agenda-details">
+                        <summary>
+                            <span>Présence demandée 15 min avant</span>
+                            <span class="agenda-action">Détails <img class="icon" src="assets/chevron.svg" alt="" width="18" height="18"></span>
+                        </summary>
+                        <p>Entraînement collectif des Seniors 1. Pensez à apporter votre équipement.</p>
+                    </details>
+                </article>
+            </li>
+        <li class="agenda-event agenda-event--match" id="cergy">
+                <article class="card app-card app-card--flush">
+                    <div class="card-content stack stack--tight">
+                        <div class="row">
+                            <span class="badge badge--official icon-line"><img class="icon" src="assets/trophy.svg" alt="" width="18" height="18"> Match officiel</span>
+                            <span class="badge badge--blue icon-line"><img class="icon" src="assets/house.svg" alt="" width="18" height="18"> À domicile</span>
+                        </div>
+                        <h2>Seniors 1 <span class="match-versus">vs</span> Cergy Futsal</h2>
+                        <p class="icon-line text-blue"><img class="icon" src="assets/date.svg" alt="" width="18" height="18"><span><time datetime="2024-10-26T18:30">Samedi 26 octobre · 18 h 30 – 20 h 30</time></span></p>
+                        <p class="icon-line muted"><img class="icon" src="assets/venue.svg" alt="" width="18" height="18"><span>Gymnase des Chênes, Bezons</span></p>
+                    </div>
+                    <details class="card-details agenda-details">
+                        <summary>
+                            <span>Championnat R1 · J5</span>
+                            <span class="agenda-action">Feuille de match <img class="icon" src="assets/chevron.svg" alt="" width="18" height="18"></span>
+                        </summary>
+                        <p>AS Bezons Futsal reçoit Cergy Futsal Club. La feuille officielle sera disponible dans l’application.</p>
+                    </details>
+                </article>
+            </li>
+        <li class="agenda-event agenda-event--training" id="tactique">
+                <article class="card app-card app-card--flush">
+                    <div class="card-content stack stack--tight">
+                        <div class="row">
+                            <span class="badge badge--blue icon-line"><img class="icon" src="assets/planning-training.svg" alt="" width="18" height="18"> Entraînement</span>
+                            <span class="badge badge--blue icon-line"><img class="icon" src="assets/clock.svg" alt="" width="18" height="18"> Planifié</span>
+                        </div>
+                        <h2>Seniors 1 &amp; Réserve</h2>
+                        <p class="icon-line text-blue"><img class="icon" src="assets/date.svg" alt="" width="18" height="18"><span><time datetime="2024-10-29T19:30">Mardi 29 octobre · 19 h 30 – 21 h 30</time></span></p>
+                        <p class="icon-line muted"><img class="icon" src="assets/event-pin.svg" alt="" width="18" height="18"><span>Gymnase Jean Moulin, Bezons</span></p>
+                    </div>
+                    <details class="card-details agenda-details">
+                        <summary>
+                            <span>Préparation tactique</span>
+                            <span class="agenda-action">Détails <img class="icon" src="assets/chevron.svg" alt="" width="18" height="18"></span>
+                        </summary>
+                        <p>Séance commune des Seniors 1 et de la réserve.</p>
+                    </details>
+                </article>
+            </li>
+        <li class="agenda-event agenda-event--match" id="amical">
+                <article class="card app-card app-card--flush">
+                    <div class="card-content stack stack--tight">
+                        <div class="row">
+                            <span class="badge badge--friendly icon-line"><img class="icon" src="assets/trophy.svg" alt="" width="18" height="18"> Match amical</span>
+                            <span class="badge badge--warning icon-line"><img class="icon" src="assets/event-pin.svg" alt="" width="18" height="18"> Déplacement</span>
+                        </div>
+                        <h2>U18 Futsal <span class="match-versus">vs</span> Argenteuil</h2>
+                        <p class="icon-line text-blue"><img class="icon" src="assets/date.svg" alt="" width="18" height="18"><span><time datetime="2024-11-03T15:00">Dimanche 3 novembre · 15 h – 17 h</time></span></p>
+                        <p class="icon-line muted"><img class="icon" src="assets/event-pin.svg" alt="" width="18" height="18"><span>Gymnase Romain Rolland, Argenteuil</span></p>
+                    </div>
+                    <details class="card-details agenda-details">
+                        <summary>
+                            <span>Rendez-vous au club à 13 h 45</span>
+                            <span class="agenda-action">Itinéraire <img class="icon" src="assets/chevron.svg" alt="" width="18" height="18"></span>
+                        </summary>
+                        <p>Lieu de rendez-vous · Gymnase Romain Rolland, Argenteuil.</p>
+                    </details>
+                </article>
+            </li></ul>
+            </div>
+            <div class="note "><img class="icon" src="assets/info.svg" alt="" width="18" height="18"><p>Les convocations individuelles et les confirmations de présence seront envoyées par notification au plus tard 48 heures avant chaque événement.</p></div>
+    </main>
+
+    <nav class="site-nav" aria-label="Navigation principale">
+        <a href="tableau-de-bord.html"><img class="icon" src="assets/nav-home-outline.svg" alt="" width="18" height="18"><span>Accueil</span></a>
+        <a href="planning.html" aria-current="page"><img class="icon" src="assets/nav-planning.svg" alt="" width="18" height="18"><span>Planning</span></a>
+        <a href="equipe.html"><img class="icon" src="assets/nav-team-people.svg" alt="" width="18" height="18"><span>Équipe</span></a>
+        <a href="profil.html"><img class="icon" src="assets/nav-profile.svg" alt="" width="18" height="18"><span>Mon profil</span></a>
+    </nav>
+</body>
+</html>

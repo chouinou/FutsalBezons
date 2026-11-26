@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Mon profil | AS Bezons Futsal</title>
+    <link rel="icon" href="assets/bezons-futsal-ball.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="member-page">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="tableau-de-bord.html">
+                <img src="assets/bezons-futsal-ball.svg" alt="" width="36" height="36">
+                <span>AS Bezons Futsal</span>
+            </a>
+            <details class="site-menu">
+                <summary aria-label="Menu">
+                    <span class="menu-icon" aria-hidden="true"><span></span></span>
+                </summary>
+                <nav class="menu-panel" aria-label="Autres pages">
+                    <a href="adhesion.html">Mon adhésion</a>
+                    <a href="cotisations.html">Cotisations</a>
+                    <a href="coach.html">Espace coach</a>
+                    <a href="administration.html">Administration</a>
+                    <a href="index.html">Se déconnecter</a>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <main id="contenu" class="container page app-page" tabindex="-1">
+        <section class="card app-card stack" aria-labelledby="nom-profil">
+            <div class="profile-head">
+                <div class="profile-photo-wrap">
+                    <img class="profile-photo" src="assets/profile-photo.png" alt="" width="64" height="64">
+                    <img class="icon" src="assets/photo-badge.svg" alt="" width="18" height="18">
+                </div>
+                <div class="stack stack--tight">
+                    <h1 id="nom-profil">Thomas Lefebvre</h1>
+                    <span class="badge badge--blue icon-line"><img class="icon" src="assets/verified.svg" alt="" width="18" height="18"> Vérifié FFF</span>
+                    <p class="muted">Joueur senior · Capitaine</p>
+                    <p class="icon-line small"><img class="icon" src="assets/license.svg" alt="" width="18" height="18"><span>Licence · 2548901239</span></p>
+                </div>
+            </div>
+            <div class="well stack stack--tight">
+                <p class="icon-line small"><img class="icon" src="assets/email.svg" alt="" width="18" height="18"><span><a href="mailto:thomas.lefebvre@example.com">thomas.lefebvre@example.com</a></span></p>
+                <div class="row"><p class="icon-line small"><img class="icon" src="assets/phone.svg" alt="" width="18" height="18"><span><span>06 12 34 56 78</span></span></p><a class="small" href="tel:+33612345678">Appeler</a></div>
+            </div>
+        </section>
+
+        <section class="card app-card stack" aria-labelledby="profil-cotisations">
+            <div class="row"><h2 id="profil-cotisations" class="icon-line"><img class="icon" src="assets/profile-payment.svg" alt="" width="18" height="18"> Cotisation et règlements</h2><span class="badge badge--blue">2024–2025</span></div>
+            <dl class="metrics metrics--amount">
+            <div><dt>Montant annuel</dt><dd>180,00 €</dd></div>
+            <div><dt>Solde dû</dt><dd class="text-blue">0,00 €</dd></div>
+        </dl>
+            <span class="badge badge--success icon-line"><img class="icon" src="assets/paid.svg" alt="" width="18" height="18"> À jour de cotisation</span>
+            <div class="row"><p>Prélèvement automatique<br><span class="small muted">15 oct. 2024</span></p><strong>90,00 €</strong></div>
+            <a class="button button--secondary button--full" href="cotisations.html">Consulter l’historique et les attestations <img class="icon" src="assets/chevron.svg" alt="" width="18" height="18"></a>
+        </section>
+
+        <section class="card app-card stack" aria-labelledby="profil-sportif">
+            <div class="row"><h2 id="profil-sportif" class="icon-line"><img class="icon" src="assets/sport.svg" alt="" width="18" height="18"> Profil sportif</h2><span class="small muted">AS Bezons Futsal</span></div>
+            <dl class="metrics">
+                <div><dt>Équipe active</dt><dd><a href="equipe.html">Seniors 1</a></dd></div>
+                <div><dt>Poste et maillot</dt><dd>N° 10 · Fixe / Meneur</dd></div>
+            </dl>
+            <div class="well stack stack--tight">
+                <div class="row"><label for="assiduite" class="icon-line"><img class="icon" src="assets/attendance.svg" alt="" width="18" height="18"> Assiduité aux séances</label><strong class="text-blue">92 %</strong></div>
+                <progress id="assiduite" max="25" value="23">23 sur 25</progress>
+                <p class="small muted">Présent à 23 entraînements sur 25 cette saison.</p>
+            </div>
+        </section>
+
+        <section class="card app-card stack" aria-labelledby="profil-documents">
+            <h2 id="profil-documents" class="icon-line"><img class="icon" src="assets/folder.svg" alt="" width="18" height="18"> Documents et licences</h2>
+            <div class="well status-row"><p class="icon-line "><img class="icon" src="assets/medical.svg" alt="" width="18" height="18"><span>Certificat médical FFF</span></p><a class="small" href="adhesion.html">Voir le dossier</a></div>
+            <div class="well status-row"><p class="icon-line "><img class="icon" src="assets/document.svg" alt="" width="18" height="18"><span>Attestation de licence</span></p><button class="button button--secondary" type="button" disabled>PDF</button></div>
+        </section>
+        <details id="coordonnees" class="edit-profile">
+            <summary class="button button--full"><img class="icon" src="assets/edit.svg" alt="" width="18" height="18"> Modifier mes coordonnées</summary>
+            <form class="card app-card stack" method="post">
+                <div class="field"><label for="first-name">Prénom</label><input id="first-name" name="first_name" value="Thomas" autocomplete="given-name" required></div>
+                <div class="field"><label for="last-name">Nom</label><input id="last-name" name="last_name" value="Lefebvre" autocomplete="family-name" required></div>
+                <div class="field"><label for="email">Adresse e-mail</label><input id="email" name="email" type="email" value="thomas.lefebvre@example.com" autocomplete="email" required></div>
+                <div class="field"><label for="phone">Téléphone</label><input id="phone" name="phone" type="tel" autocomplete="tel" value="06 12 34 56 78"></div>
+                <button type="submit" class="button" disabled>Enregistrer</button>
+            </form>
+        </details>
+        <a class="button button--secondary button--full" href="index.html"><img class="icon" src="assets/logout.svg" alt="" width="18" height="18"> Se déconnecter</a>
+    </main>
+
+    <nav class="site-nav" aria-label="Navigation principale">
+        <a href="tableau-de-bord.html"><img class="icon" src="assets/nav-home-outline.svg" alt="" width="18" height="18"><span>Accueil</span></a>
+        <a href="planning.html"><img class="icon" src="assets/nav-planning.svg" alt="" width="18" height="18"><span>Planning</span></a>
+        <a href="equipe.html"><img class="icon" src="assets/nav-team-people.svg" alt="" width="18" height="18"><span>Équipe</span></a>
+        <a href="profil.html" aria-current="page"><img class="icon" src="assets/nav-profile.svg" alt="" width="18" height="18"><span>Mon profil</span></a>
+    </nav>
+</body>
+</html>
