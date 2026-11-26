@@ -21,9 +21,8 @@ class TeamMember
     #[ORM\JoinColumn(nullable: false)]
     private ?Team $team_id = null;
 
-    #[ORM\ManyToOne(inversedBy: 'teamMembers')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Season $season_id = null;
+    #[ORM\Column(length: 20)]
+    private ?string $role = null;
 
     public function getId(): ?int
     {
@@ -54,14 +53,14 @@ class TeamMember
         return $this;
     }
 
-    public function getSeasonId(): ?Season
+    public function getRole(): ?string
     {
-        return $this->season_id;
+        return $this->role;
     }
 
-    public function setSeasonId(?Season $season_id): static
+    public function setRole(string $role): static
     {
-        $this->season_id = $season_id;
+        $this->role = $role;
 
         return $this;
     }

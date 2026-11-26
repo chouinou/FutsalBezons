@@ -20,7 +20,7 @@ class AppFixtures extends Fixture
         $season = $this->createSeason($manager);
         $users = $this->createUsers($manager);
         $teams = $this->createTeams($manager, $season);
-        $this->createTeamMembers($manager, $season, $teams, $users);
+        $this->createTeamMembers($manager, $teams, $users);
         $this->createMemberships($manager, $season, $users);
         $this->createEvents($manager, $teams, $this->createLocations($manager), $users);
 
@@ -109,7 +109,7 @@ class AppFixtures extends Fixture
      * @param array<string, Team>  $teams
      * @param array<string, Users> $users
      */
-    private function createTeamMembers(ObjectManager $manager, Season $season, array $teams, array $users): void
+    private function createTeamMembers(ObjectManager $manager, array $teams, array $users): void
     {
         // joueur3 fait partie des deux équipes
         $composition = [
@@ -122,7 +122,7 @@ class AppFixtures extends Fixture
                 $manager->persist((new TeamMember())
                     ->setUserId($users[$userKey])
                     ->setTeamId($teams[$teamKey])
-                    ->setSeasonId($season));
+                    );
             }
         }
     }
