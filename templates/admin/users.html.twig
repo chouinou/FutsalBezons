@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Comptes inactifs</h1>
+
+    {% for message in app.flashes('success') %}
+        <p>{{ message }}</p>
+    {% endfor %}
+
+    {% for user in users %}
+        <form method="post" action="{{ path('app_admin_user_activate', {id: user.id}) }}">
+            {{ user.firstName }} {{ user.lastName }} ({{ user.email }})
+            <input type="hidden" name="_token" value="{{ csrf_token('activate' ~ user.id) }}">
+            <button type="submit">Activer</button>
+        </form>
+    {% else %}
+        <p>Aucun compte inactif.</p>
+    {% endfor %}
+{% endblock %}
