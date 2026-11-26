@@ -20,7 +20,7 @@ class AppFixtures extends Fixture
         $season = $this->createSeason($manager);
         $users = $this->createUsers($manager);
         $teams = $this->createTeams($manager, $season);
-        $this->createTeamMembers($manager, $season, $teams, $users);
+        $this->createTeamMembers($manager, $teams, $users);
         $this->createMemberships($manager, $season, $users);
         $this->createEvents($manager, $teams, $this->createLocations($manager), $users);
 
@@ -109,20 +109,32 @@ class AppFixtures extends Fixture
      * @param array<string, Team>  $teams
      * @param array<string, Users> $users
      */
-    private function createTeamMembers(ObjectManager $manager, Season $season, array $teams, array $users): void
+    private function createTeamMembers(ObjectManager $manager, array $teams, array $users): void
     {
-        // joueur3 fait partie des deux équipes
+        // joueur3 fait partie des deux équipes ; coach1 est joueur chez les loisirs
         $composition = [
-            'seniors' => ['coach1', 'joueur1', 'joueur2', 'joueur3'],
-            'loisirs' => ['coach2', 'joueur3', 'joueur4', 'joueur5'],
+            'seniors' => [
+                ['coach1', 'Coach'],
+                ['joueur1', 'Joueur'],
+                ['joueur2', 'Joueur'],
+                ['joueur3', 'Joueur'],
+            ],
+            'loisirs' => [
+                ['coach2', 'Coach'],
+                ['coach1', 'Joueur'],
+                ['joueur3', 'Joueur'],
+                ['joueur4', 'Joueur'],
+                ['joueur5', 'Joueur'],
+            ],
         ];
 
         foreach ($composition as $teamKey => $userKeys) {
-            foreach ($userKeys as $userKey) {
+            foreach ($userKeys as [$userKey, $role]) {
                 $manager->persist((new TeamMember())
                     ->setUserId($users[$userKey])
                     ->setTeamId($teams[$teamKey])
-                    ->setSeasonId($season));
+                    ->setRole($role)
+                    );
             }
         }
     }

@@ -40,17 +40,10 @@ class Season
     #[ORM\OneToMany(targetEntity: Team::class, mappedBy: 'season_id')]
     private Collection $teams;
 
-    /**
-     * @var Collection<int, TeamMember>
-     */
-    #[ORM\OneToMany(targetEntity: TeamMember::class, mappedBy: 'season_id')]
-    private Collection $teamMembers;
-
     public function __construct()
     {
         $this->memberships = new ArrayCollection();
         $this->teams = new ArrayCollection();
-        $this->teamMembers = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -160,36 +153,6 @@ class Season
             // set the owning side to null (unless already changed)
             if ($team->getSeasonId() === $this) {
                 $team->setSeasonId(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, TeamMember>
-     */
-    public function getTeamMembers(): Collection
-    {
-        return $this->teamMembers;
-    }
-
-    public function addTeamMember(TeamMember $teamMember): static
-    {
-        if (!$this->teamMembers->contains($teamMember)) {
-            $this->teamMembers->add($teamMember);
-            $teamMember->setSeasonId($this);
-        }
-
-        return $this;
-    }
-
-    public function removeTeamMember(TeamMember $teamMember): static
-    {
-        if ($this->teamMembers->removeElement($teamMember)) {
-            // set the owning side to null (unless already changed)
-            if ($teamMember->getSeasonId() === $this) {
-                $teamMember->setSeasonId(null);
             }
         }
 
