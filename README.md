@@ -10,9 +10,9 @@ Gérer l'association AS Futsal Bezons devient difficile. cela implique la gestio
 
 | Membre | Compte GitHub | Rôle |
 |---|---|---|
-| Max | [@compte](https://github.com/DrCodx) | Product Owner & Developer |
+| Max | [@DrCodx](https://github.com/DrCodx) | Product Owner & Developer |
 | Romain | [@chouinou](https://github.com/chouinou) | Scrum Master & Developer |
-| Paul | [@compte]() | Developer |
+| Paul | [@roussel12paul-sudo](https://github.com/roussel12paul-sudo) | Developer |
 | Ivan | [@ivanraphei](https://github.com/ivanraphei) | Developer |
 
 

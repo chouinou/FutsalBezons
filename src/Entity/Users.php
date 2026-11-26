@@ -6,9 +6,14 @@ use App\Repository\UsersRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UsersRepository::class)]
-class Users
+#[ORM\UniqueConstraint(name: 'UNIQ_USERS_EMAIL', fields: ['email'])]
+#[UniqueEntity(fields: ['email'], message: 'Un compte existe déjà avec cet email.')]
+class Users implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -134,7 +139,11 @@ class Users
 
     public function getRoles(): array
     {
-        return $this->roles;
+        $roles = $this->roles;
+        // chaque utilisateur a au minimum ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_values(array_unique($roles));
     }
 
     public function setRoles(array $roles): static
@@ -268,5 +277,24 @@ class Users
         }
 
         return $this;
+    }
+
+        public function getUserIdentifier(): string
+    {
+        return (string) $this->email;
+    }
+
+    // Évite de stocker le vrai hash du mot de passe en session.
+    public function __serialize(): array
+    {
+        $data = (array) $this;
+        $data["\0".self::class."\0password"] = hash('crc32c', (string) $this->password);
+
+        return $data;
+    }
+        #[\Deprecated]
+    public function eraseCredentials(): void
+    {
+        // Requise par l'interface en Symfony 7.4, à retirer pour Symfony 8
     }
 }
