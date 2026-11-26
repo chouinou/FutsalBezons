@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Créer un compte | AS Bezons Futsal</title>
+    <link rel="icon" href="assets/bezons-futsal-ball.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="guest-page">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <img src="assets/bezons-futsal-ball.svg" alt="" width="36" height="36">
+                <span>AS Bezons Futsal</span>
+            </a>
+            <details class="site-menu">
+                <summary aria-label="Menu">
+                    <span class="menu-icon" aria-hidden="true"><span></span></span>
+                </summary>
+                <nav class="menu-panel" aria-label="Autres pages">
+                    <a href="index.html">Accueil</a>
+                    <a href="connexion.html">Se connecter</a>
+                    <a href="inscription.html" aria-current="page">Créer un compte</a>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <main id="contenu" class="container page app-page" tabindex="-1">
+        <div class="login-layout stack">
+            <header class="app-heading"><div><h1>Créer un compte</h1></div></header>
+            <form class="card stack" method="post">
+                <div class="two-columns">
+                    <div class="field">
+                        <label for="first-name">Prénom</label>
+                        <input id="first-name" name="first_name" type="text" autocomplete="given-name" maxlength="100" required>
+                    </div>
+                    <div class="field">
+                        <label for="last-name">Nom</label>
+                        <input id="last-name" name="last_name" type="text" autocomplete="family-name" maxlength="100" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="email">Adresse e-mail</label>
+                    <input id="email" name="email" type="email" autocomplete="email" maxlength="180" required>
+                </div>
+                <div class="field">
+                    <label for="password">Mot de passe</label>
+                    <input id="password" name="password" type="password" autocomplete="new-password" required>
+                </div>
+                <div class="form-footer">
+                    <button class="button" type="submit" disabled>Créer un compte</button>
+                    <p class="form-note">L’inscription sera disponible dans l’application Symfony.</p>
+                </div>
+                <p><a href="connexion.html">Retour à la connexion</a></p>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

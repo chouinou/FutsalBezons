@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Espace coach | AS Bezons Futsal</title>
+    <link rel="icon" href="assets/bezons-futsal-ball.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="member-page">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="tableau-de-bord.html">
+                <img src="assets/bezons-futsal-ball.svg" alt="" width="36" height="36">
+                <span>AS Bezons Futsal</span>
+            </a>
+            <details class="site-menu">
+                <summary aria-label="Menu">
+                    <span class="menu-icon" aria-hidden="true"><span></span></span>
+                </summary>
+                <nav class="menu-panel" aria-label="Autres pages">
+                    <a href="adhesion.html">Mon adhésion</a>
+                    <a href="cotisations.html">Cotisations</a>
+                    <a href="coach.html" aria-current="page">Espace coach</a>
+                    <a href="administration.html">Administration</a>
+                    <a href="index.html">Se déconnecter</a>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <main id="contenu" class="container page app-page" tabindex="-1">
+        <header class="app-heading"><div><h1>Espace coach</h1></div></header>
+        <section class="card app-card stack" aria-labelledby="equipe-coach">
+            <div class="row">
+                <div class="profile-head">
+                    <span class="avatar avatar--square"><img class="icon" src="assets/coach-ball.svg" alt="" width="18" height="18"></span>
+                    <div><h2 id="equipe-coach">Seniors 1</h2><span class="badge badge--blue">Régionale 1</span><p class="small muted">Coach Karim Bensaid</p></div>
+                </div>
+                <a class="button button--secondary" href="equipe.html">Voir l’équipe</a>
+            </div>
+            <dl class="metrics metrics--three">
+                <div><dt>Joueurs</dt><dd>12</dd></div>
+                <div><dt>Classement</dt><dd>2e</dd></div>
+                <div><dt>Assiduité</dt><dd>86 %</dd></div>
+            </dl>
+        </section>
+        <a class="button button--full" href="#nouvel-evenement"><img class="icon" src="assets/plus.svg" alt="" width="18" height="18"> Créer un événement</a>
+        <section class="stack" aria-labelledby="coach-evenements">
+            <div class="row"><h2 id="coach-evenements">Prochains événements</h2><span class="small muted">2 à venir</span></div>
+            <article class="card app-card stack">
+                <div class="row"><h3 class="icon-line"><img class="icon" src="assets/coach-trophy.svg" alt="" width="18" height="18"> AS Bezons vs Cergy Futsal</h3><span class="badge badge--blue">Confirmé</span></div>
+                <div class="well stack stack--tight"><p class="icon-line "><img class="icon" src="assets/coach-calendar.svg" alt="" width="18" height="18"><span>Samedi 26 octobre · 18 h 30 – 20 h 30</span></p><p class="icon-line "><img class="icon" src="assets/event-pin.svg" alt="" width="18" height="18"><span>Gymnase des Chênes, Bezons</span></p></div>
+                <div class="row"><span class="small muted">10 confirmés · 2 absents</span><a href="planning.html#cergy">Voir le match</a></div>
+            </article>
+            <article class="card app-card stack">
+                <div class="row"><h3 class="icon-line"><img class="icon" src="assets/training.svg" alt="" width="18" height="18"> Entraînement tactique</h3><span class="badge badge--blue">Confirmé</span></div>
+                <div class="well stack stack--tight"><p class="icon-line "><img class="icon" src="assets/coach-calendar.svg" alt="" width="18" height="18"><span>Mardi 29 octobre · 19 h 30 – 21 h 30</span></p><p class="icon-line "><img class="icon" src="assets/event-pin.svg" alt="" width="18" height="18"><span>Gymnase Jean Moulin, Bezons</span></p></div>
+                <div class="row"><span class="small muted">12 confirmés · 0 absent</span><a href="planning.html#tactique">Voir la séance</a></div>
+            </article>
+        </section>
+        <section class="card stack" id="nouvel-evenement" aria-labelledby="creation-evenement">
+                <h2 id="creation-evenement">Créer un événement</h2>
+                <form class="stack" method="post">
+                    <div class="two-columns">
+                        <div class="field">
+                            <label for="event-type">Type</label>
+                            <select id="event-type" name="type" required>
+                                <option value="training">Entraînement</option>
+                                <option value="match">Match</option>
+
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="event-team">Équipe</label>
+                            <select id="event-team" name="team_id" required>
+                                <option value="1">Seniors 1</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="two-columns">
+                        <div class="field">
+                            <label for="event-start">Début</label>
+                            <input id="event-start" name="start_date" type="datetime-local" required>
+                        </div>
+                        <div class="field">
+                            <label for="event-end">Fin</label>
+                            <input id="event-end" name="end_date" type="datetime-local" required>
+                        </div>
+                    </div>
+                    <div class="two-columns">
+                        <div class="field">
+                            <label for="event-location">Lieu</label>
+                            <select id="event-location" name="location_id">
+                                <option value="">À préciser</option>
+                                <option value="1">Gymnase Jean Moulin, Bezons</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="event-status">Statut</label>
+                            <select id="event-status" name="status" required>
+                                <option value="scheduled">Planifié</option>
+                                <option value="cancelled">Annulé</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="event-description">Description (facultative)</label>
+                        <textarea id="event-description" name="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-footer">
+                        <div class="actions"><button class="button" type="submit" disabled>Enregistrer l’événement</button></div>
+                        <p class="form-note">L’enregistrement sera disponible dans l’application Symfony.</p>
+                    </div>
+                </form>
+            </section>
+    </main>
+
+    <nav class="site-nav" aria-label="Navigation principale">
+        <a href="tableau-de-bord.html"><img class="icon" src="assets/nav-home-outline.svg" alt="" width="18" height="18"><span>Accueil</span></a>
+        <a href="planning.html"><img class="icon" src="assets/nav-planning.svg" alt="" width="18" height="18"><span>Planning</span></a>
+        <a href="equipe.html"><img class="icon" src="assets/nav-team-people.svg" alt="" width="18" height="18"><span>Équipe</span></a>
+        <a href="profil.html"><img class="icon" src="assets/nav-profile.svg" alt="" width="18" height="18"><span>Mon profil</span></a>
+    </nav>
+</body>
+</html>

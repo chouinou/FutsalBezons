@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Tableau de bord | AS Bezons Futsal</title>
+    <link rel="icon" href="assets/bezons-futsal-ball.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="member-page">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="tableau-de-bord.html">
+                <img src="assets/bezons-futsal-ball.svg" alt="" width="36" height="36">
+                <span>AS Bezons Futsal</span>
+            </a>
+            <details class="site-menu">
+                <summary aria-label="Menu">
+                    <span class="menu-icon" aria-hidden="true"><span></span></span>
+                </summary>
+                <nav class="menu-panel" aria-label="Autres pages">
+                    <a href="adhesion.html">Mon adhésion</a>
+                    <a href="cotisations.html">Cotisations</a>
+                    <a href="coach.html">Espace coach</a>
+                    <a href="administration.html">Administration</a>
+                    <a href="index.html">Se déconnecter</a>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <main id="contenu" class="container page app-page" tabindex="-1">
+        <section class="card stack app-card" aria-labelledby="bonjour">
+            <div class="app-heading">
+                <div class="stack stack--tight">
+                    <h1 id="bonjour">Bonjour Thomas</h1>
+                    <p class="muted">Saison 2024–2025 · Équipe Seniors A</p>
+                </div>
+                <span class="avatar avatar--number" aria-label="Maillot numéro 10">10</span>
+            </div>
+            <div class="well status-row">
+                <span class="badge badge--success icon-line"><img class="icon" src="assets/check.svg" alt="" width="18" height="18"> Adhésion validée</span>
+                <span class="small muted">Validée le 12 sept. 2024</span>
+            </div>
+        </section>
+
+        <section class="feature training-hero" aria-labelledby="prochaine-seance">
+            <div class="stack">
+                <strong>Prochain entraînement</strong>
+                <h2 id="prochaine-seance">Entraînement collectif</h2>
+                <p><time datetime="2024-10-24T20:00">Jeudi 24 octobre · 20 h – 22 h</time></p>
+                <p>Gymnase Jean Moulin, Bezons</p>
+                <div><a class="button button--light" href="planning.html#collectif">Voir le planning</a></div>
+            </div>
+            <div class="date-tile" aria-hidden="true"><b>24</b><span>OCT.</span></div>
+        </section>
+
+        <section class="stack stack--tight" aria-labelledby="prochain-match">
+            <div class="row app-label-row">
+                <h2 class="section-label" id="prochain-match">Match officiel</h2><span class="small muted">Régional 1 · J5</span>
+            </div>
+            <div class="card app-card app-card--accent stack">
+                <div class="row">
+                    <span class="badge badge--blue">Compétition</span>
+                    <p class="icon-line small"><img class="icon" src="assets/small-calendar.svg" alt="" width="18" height="18"><span><time datetime="2024-10-26T18:30">Sam. 26 oct. · 18 h 30</time></span></p>
+                </div>
+                <div class="opponents">
+                    <div class="team-line"><span class="avatar avatar--mini avatar--blue" aria-hidden="true">ASB</span><strong>AS Bezons Futsal</strong><span class="badge badge--neutral">DOM</span></div>
+                    <p class="opponents-versus">VS</p>
+                    <div class="team-line"><span class="avatar avatar--mini" aria-hidden="true">CFC</span><strong>Cergy Futsal Club</strong><span class="badge badge--neutral">EXT</span></div>
+                </div>
+                <div class="well"><p class="icon-line muted"><img class="icon" src="assets/venue.svg" alt="" width="18" height="18"><span>Gymnase des Chênes, Bezons</span></p></div>
+            </div>
+        </section>
+        <a class="button button--full" href="planning.html"><img class="icon" src="assets/agenda.svg" alt="" width="18" height="18"> Voir le planning complet</a>
+    </main>
+
+    <nav class="site-nav" aria-label="Navigation principale">
+        <a href="tableau-de-bord.html" aria-current="page"><img class="icon" src="assets/nav-home-outline.svg" alt="" width="18" height="18"><span>Accueil</span></a>
+        <a href="planning.html"><img class="icon" src="assets/nav-planning.svg" alt="" width="18" height="18"><span>Planning</span></a>
+        <a href="equipe.html"><img class="icon" src="assets/nav-team-people.svg" alt="" width="18" height="18"><span>Équipe</span></a>
+        <a href="profil.html"><img class="icon" src="assets/nav-profile.svg" alt="" width="18" height="18"><span>Mon profil</span></a>
+    </nav>
+</body>
+</html>

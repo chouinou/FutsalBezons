@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <title>AS Bezons Futsal — football</title>
+  <circle cx="32" cy="32" r="29" fill="#FFFFFF"/>
+  <g stroke="#152A49" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 21V17M42.46 28.6L46.27 27.36M38.47 40.9L40.82 44.14M25.53 40.9L23.18 44.14M21.54 28.6L17.73 27.36"/>
+    <g fill="#2563EB">
+      <path d="M22.08 4.75A29 29 0 0 1 41.92 4.75L43.2 11.5L32 17L20.8 11.5Z"/>
+      <path d="M22.08 4.75A29 29 0 0 1 41.92 4.75L43.2 11.5L32 17L20.8 11.5Z" transform="rotate(72 32 32)"/>
+      <path d="M22.08 4.75A29 29 0 0 1 41.92 4.75L43.2 11.5L32 17L20.8 11.5Z" transform="rotate(144 32 32)"/>
+      <path d="M22.08 4.75A29 29 0 0 1 41.92 4.75L43.2 11.5L32 17L20.8 11.5Z" transform="rotate(216 32 32)"/>
+      <path d="M22.08 4.75A29 29 0 0 1 41.92 4.75L43.2 11.5L32 17L20.8 11.5Z" transform="rotate(288 32 32)"/>
+    </g>
+    <path d="M32 21L42.46 28.6L38.47 40.9H25.53L21.54 28.6Z" fill="#152A49"/>
+  </g>
+  <circle cx="32" cy="32" r="29" stroke="#152A49" stroke-width="2.5"/>
+</svg>

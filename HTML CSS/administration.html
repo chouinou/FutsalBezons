@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Administration | AS Bezons Futsal</title>
+    <link rel="icon" href="assets/bezons-futsal-ball.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="member-page">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="tableau-de-bord.html">
+                <img src="assets/bezons-futsal-ball.svg" alt="" width="36" height="36">
+                <span>AS Bezons Futsal</span>
+            </a>
+            <details class="site-menu">
+                <summary aria-label="Menu">
+                    <span class="menu-icon" aria-hidden="true"><span></span></span>
+                </summary>
+                <nav class="menu-panel" aria-label="Autres pages">
+                    <a href="adhesion.html">Mon adhésion</a>
+                    <a href="cotisations.html">Cotisations</a>
+                    <a href="coach.html">Espace coach</a>
+                    <a href="administration.html" aria-current="page">Administration</a>
+                    <a href="index.html">Se déconnecter</a>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <main id="contenu" class="container page app-page" tabindex="-1">
+        <header class="app-heading"><div><p class="kicker">Portail dirigeants</p><h1>Administration du club</h1></div><img class="icon" src="assets/admin.svg" alt="" width="18" height="18"></header>
+        <nav class="filter-tabs admin-nav" aria-label="Rubriques d’administration">
+            <a href="#adhesions">Adhésions</a><a href="#equipes">Équipes</a><a href="#saisons">Saisons</a><a href="#evenement-club">Planning</a><a href="cotisations.html">Cotisations</a><a href="#lieux">Lieux</a>
+        </nav>
+        <section class="stack" id="adhesions" aria-labelledby="admin-adhesions">
+            <div class="row"><h2 id="admin-adhesions">Gestion des adhésions</h2><span class="badge badge--blue">3 à traiter</span></div>
+            <article class="card app-card stack">
+            <div class="row">
+                <div class="profile-head"><span class="avatar avatar--mini" aria-hidden="true">KI</span><div><h3>Karim Idrissi</h3><p class="small muted">2024–2025 · Senior</p></div></div>
+                <span class="badge badge--warning">En attente</span>
+            </div>
+            <div class="well"><p class="icon-line small"><img class="icon" src="assets/document.svg" alt="" width="18" height="18"><span>certificat_medical.pdf</span></p></div>
+            <details class="card-details">
+                <summary class="icon-line"><img class="icon" src="assets/admin-eye.svg" alt="" width="18" height="18"> Consulter le dossier</summary>
+                <form class="stack" method="post">
+                    <div class="field"><label for="refus-KI">Motif de refus</label><textarea id="refus-KI" name="rejection" rows="2"></textarea></div>
+                    <div class="actions"><button class="button button--secondary" type="submit" disabled>Refuser</button><button class="button" type="submit" disabled>Valider</button></div>
+                </form>
+            </details>
+        </article>
+            <article class="card app-card stack">
+            <div class="row">
+                <div class="profile-head"><span class="avatar avatar--mini" aria-hidden="true">MD</span><div><h3>Marc Delorme</h3><p class="small muted">2024–2025 · Vétéran</p></div></div>
+                <span class="badge badge--danger">Incomplet</span>
+            </div>
+            <div class="well"><p class="icon-line small"><img class="icon" src="assets/alert.svg" alt="" width="18" height="18"><span>certificat_expire.pdf</span></p></div>
+            <details class="card-details">
+                <summary class="icon-line"><img class="icon" src="assets/admin-eye.svg" alt="" width="18" height="18"> Consulter le dossier</summary>
+                <form class="stack" method="post">
+                    <div class="field"><label for="refus-MD">Motif de refus</label><textarea id="refus-MD" name="rejection" rows="2"></textarea></div>
+                    <div class="actions"><button class="button button--secondary" type="submit" disabled>Refuser</button><button class="button" type="submit" disabled>Valider</button></div>
+                </form>
+            </details>
+        </article>
+            <article class="card app-card stack">
+            <div class="row">
+                <div class="profile-head"><span class="avatar avatar--mini" aria-hidden="true">SC</span><div><h3>Sébastien Colin</h3><p class="small muted">2024–2025 · Senior</p></div></div>
+                <span class="badge badge--warning">En attente</span>
+            </div>
+            <div class="well"><p class="icon-line small"><img class="icon" src="assets/document.svg" alt="" width="18" height="18"><span>certificat_med_valide.pdf</span></p></div>
+            <details class="card-details">
+                <summary class="icon-line"><img class="icon" src="assets/admin-eye.svg" alt="" width="18" height="18"> Consulter le dossier</summary>
+                <form class="stack" method="post">
+                    <div class="field"><label for="refus-SC">Motif de refus</label><textarea id="refus-SC" name="rejection" rows="2"></textarea></div>
+                    <div class="actions"><button class="button button--secondary" type="submit" disabled>Refuser</button><button class="button" type="submit" disabled>Valider</button></div>
+                </form>
+            </details>
+        </article>
+        </section>
+        <section class="stack" id="equipes" aria-labelledby="admin-equipes">
+            <div class="row"><h2 id="admin-equipes">Gestion des équipes</h2><span class="small muted">2 actives</span></div>
+            <a class="button button--full" href="#formulaires-equipes"><img class="icon" src="assets/plus-admin.svg" alt="" width="18" height="18"> Créer une équipe</a>
+            <article class="card app-card stack">
+                <div class="row"><h3 class="icon-line"><img class="icon" src="assets/club-team.svg" alt="" width="18" height="18"> Seniors 1</h3><span class="badge badge--blue">Régionale 1</span></div>
+                <p class="small muted">Saison 2024–2025 · 12 membres affectés</p>
+                <div class="actions"><a class="button button--secondary" href="#formulaires-equipes">Modifier</a><a class="button button--secondary" href="#affecter-membre">Gérer les membres</a></div>
+            </article>
+            <article class="card app-card stack">
+                <div class="row"><h3 class="icon-line"><img class="icon" src="assets/club-team.svg" alt="" width="18" height="18"> Seniors 2</h3><span class="badge badge--blue">Départementale 1</span></div>
+                <p class="small muted">Saison 2024–2025 · 12 membres affectés</p>
+            </article>
+            <div class="card app-card stack" id="formulaires-equipes">
+                <details class="record">
+                    <summary>Créer une équipe</summary>
+                    <form class="stack" method="post">
+                        <div class="two-columns">
+                            <div class="field">
+                                <label for="team-name">Nom de l’équipe</label>
+                                <input id="team-name" name="name" type="text" maxlength="100" required>
+                            </div>
+                            <div class="field">
+                                <label for="category">Catégorie</label>
+                                <input id="category" name="category" type="text" maxlength="50" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="team-season">Saison</label>
+                            <select id="team-season" name="season_id" required><option value="1">2024–2025</option></select>
+                        </div>
+                        <div class="form-footer"><div class="actions"><button class="button" type="submit" disabled>Créer</button></div></div>
+                    </form>
+                </details>
+                <details class="record">
+                    <summary>Modifier Seniors 1</summary>
+                    <form class="stack" method="post">
+                        <div class="two-columns">
+                            <div class="field">
+                                <label for="edit-name">Nom de l’équipe</label>
+                                <input id="edit-name" name="name" type="text" value="Seniors 1" maxlength="100" required>
+                            </div>
+                            <div class="field">
+                                <label for="edit-category">Catégorie</label>
+                                <input id="edit-category" name="category" type="text" value="Seniors" maxlength="50" required>
+                            </div>
+                        </div>
+                        <div class="form-footer"><div class="actions"><button class="button" type="submit" disabled>Enregistrer</button></div></div>
+                    </form>
+                </details>
+                <details class="record" id="affecter-membre">
+                    <summary>Affecter un membre</summary>
+                    <form class="stack" method="post">
+                        <div class="two-columns">
+                            <div class="field">
+                                <label for="member">Membre</label>
+                                <select id="member" name="user_id" required><option value="">Choisir un membre</option><option value="4">Nour Diallo</option></select>
+                            </div>
+                            <div class="field">
+                                <label for="member-team">Équipe</label>
+                                <select id="member-team" name="team_id" required><option value="1">Seniors 1</option></select>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="member-season">Saison</label>
+                            <select id="member-season" name="season_id" required><option value="1">2024–2025</option></select>
+                        </div>
+                        <div class="form-footer"><div class="actions"><button class="button" type="submit" disabled>Affecter</button></div></div>
+                    </form>
+                </details>
+            </div>
+        </section>
+        <section class="card stack" id="evenement-club" aria-labelledby="creation-evenement">
+                <h2 id="creation-evenement">Créer un événement du club</h2>
+                <form class="stack" method="post">
+                    <div class="two-columns">
+                        <div class="field">
+                            <label for="event-type">Type</label>
+                            <select id="event-type" name="type" required>
+                                <option value="training">Entraînement</option>
+                                <option value="match">Match</option><option value="club" selected>Événement du club</option>
+
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="event-team">Équipe</label>
+                            <select id="event-team" name="team_id">
+                                <option value="">Tout le club</option><option value="1">Seniors 1</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="two-columns">
+                        <div class="field">
+                            <label for="event-start">Début</label>
+                            <input id="event-start" name="start_date" type="datetime-local" required>
+                        </div>
+                        <div class="field">
+                            <label for="event-end">Fin</label>
+                            <input id="event-end" name="end_date" type="datetime-local" required>
+                        </div>
+                    </div>
+                    <div class="two-columns">
+                        <div class="field">
+                            <label for="event-location">Lieu</label>
+                            <select id="event-location" name="location_id">
+                                <option value="">À préciser</option>
+                                <option value="1">Gymnase Jean Moulin, Bezons</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="event-status">Statut</label>
+                            <select id="event-status" name="status" required>
+                                <option value="scheduled">Planifié</option>
+                                <option value="cancelled">Annulé</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="event-description">Description (facultative)</label>
+                        <textarea id="event-description" name="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-footer">
+                        <div class="actions"><button class="button" type="submit" disabled>Enregistrer l’événement</button></div>
+                        <p class="form-note">L’enregistrement sera disponible dans l’application Symfony.</p>
+                    </div>
+                </form>
+            </section>
+        <div class="two-columns">
+            <section class="card app-card stack" id="saisons"><h2>Saisons</h2><div class="row"><strong>2024–2025</strong><span class="badge badge--success">Active</span></div></section>
+            <section class="card app-card stack" id="lieux"><h2>Lieux</h2><p>Gymnase Jean Moulin, Bezons</p><p>Gymnase des Chênes, Bezons</p></section>
+        </div>
+    </main>
+
+    <nav class="site-nav" aria-label="Navigation principale">
+        <a href="tableau-de-bord.html"><img class="icon" src="assets/nav-home-outline.svg" alt="" width="18" height="18"><span>Accueil</span></a>
+        <a href="planning.html"><img class="icon" src="assets/nav-planning.svg" alt="" width="18" height="18"><span>Planning</span></a>
+        <a href="equipe.html"><img class="icon" src="assets/nav-team-people.svg" alt="" width="18" height="18"><span>Équipe</span></a>
+        <a href="profil.html"><img class="icon" src="assets/nav-profile.svg" alt="" width="18" height="18"><span>Mon profil</span></a>
+    </nav>
+</body>
+</html>
