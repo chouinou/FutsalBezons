@@ -111,17 +111,29 @@ class AppFixtures extends Fixture
      */
     private function createTeamMembers(ObjectManager $manager, array $teams, array $users): void
     {
-        // joueur3 fait partie des deux équipes
+        // joueur3 fait partie des deux équipes ; coach1 est joueur chez les loisirs
         $composition = [
-            'seniors' => ['coach1', 'joueur1', 'joueur2', 'joueur3'],
-            'loisirs' => ['coach2', 'joueur3', 'joueur4', 'joueur5'],
+            'seniors' => [
+                ['coach1', 'Coach'],
+                ['joueur1', 'Joueur'],
+                ['joueur2', 'Joueur'],
+                ['joueur3', 'Joueur'],
+            ],
+            'loisirs' => [
+                ['coach2', 'Coach'],
+                ['coach1', 'Joueur'],
+                ['joueur3', 'Joueur'],
+                ['joueur4', 'Joueur'],
+                ['joueur5', 'Joueur'],
+            ],
         ];
 
         foreach ($composition as $teamKey => $userKeys) {
-            foreach ($userKeys as $userKey) {
+            foreach ($userKeys as [$userKey, $role]) {
                 $manager->persist((new TeamMember())
                     ->setUserId($users[$userKey])
                     ->setTeamId($teams[$teamKey])
+                    ->setRole($role)
                     );
             }
         }
