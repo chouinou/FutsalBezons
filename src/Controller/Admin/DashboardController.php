@@ -41,5 +41,14 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         // yield MenuItem::linkTo(SomeCrudController::class, 'The Label', 'fas fa-list');
+        yield MenuItem::linkto(UsersCrudController::class, 'Utilisateurs', 'fas fa-user');
+        yield MenuItem::linkto(MembershipCrudController::class, 'Adhésions', 'fa fa-id-card-o');
+        yield MenuItem::linkto(PaymentCrudController::class, 'Paiement', 'fa fa-money');
+        yield MenuItem::linkto(TeamCrudController::class, 'Equipes', 'fas fa-users');
+        yield MenuItem::linkto(TeamMemberCrudController::class, 'Joueurs', 'fa fa-futbol-o');
+        yield MenuItem::linkto(MembershipCrudController::class, 'Adhésions', 'fa fa-id-card-o');
+        yield MenuItem::linkto(SeasonCrudController::class, 'Saison', 'fas fa-trophy');
+        yield MenuItem::linkto(EventsCrudController::class, 'Calendrier', 'fa fa-calendar-o');       
+    
     }
 }
