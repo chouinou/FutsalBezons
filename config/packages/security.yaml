@@ -12,6 +12,8 @@ security:
 
     expose_security_errors: account_status
 
+    
+
     firewalls:
         dev:
             # Ensure dev tools and static assets are always allowed
@@ -40,8 +42,12 @@ security:
             # switch_user: true
 
     # Note: Only the *first* matching rule is applied
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_STAFF
+        ROLE_COACH: ROLE_STAFF
+
     access_control:
-    - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/admin, roles: ROLE_STAFF }
         # - { path: ^/profile, roles: ROLE_USER }
 
 when@test:
