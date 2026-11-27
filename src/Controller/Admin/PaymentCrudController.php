@@ -7,6 +7,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 
 class PaymentCrudController extends AbstractCrudController
 {
@@ -15,6 +16,11 @@ class PaymentCrudController extends AbstractCrudController
         return Payment::class;
     }
 
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+            ->setSearchFields(['method', 'status', 'reference', 'membership_id.user_id.firstName', 'membership_id.user_id.lastName']);
+    }
     /*
     public function configureFields(string $pageName): iterable
     {

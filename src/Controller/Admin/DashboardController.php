@@ -34,21 +34,24 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('FutsalBezons');
+            ->setTitle('Futsal Bezons');
     }
 
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        // yield MenuItem::linkTo(SomeCrudController::class, 'The Label', 'fas fa-list');
+        yield MenuItem::section('En attente');
+        yield MenuItem::linkTo(PendingMembershipCrudController::class, 'Adhésions en attente', 'fa fa-user-clock');
+        yield MenuItem::linkTo(PendingPaymentCrudController::class, 'Paiements en attente', 'fa fa-clock');
+        yield MenuItem::section('Administration');
         yield MenuItem::linkto(UsersCrudController::class, 'Utilisateurs', 'fas fa-user');
         yield MenuItem::linkto(MembershipCrudController::class, 'Adhésions', 'fa fa-id-card-o');
         yield MenuItem::linkto(PaymentCrudController::class, 'Paiement', 'fa fa-money');
+        yield MenuItem::section('Club');
         yield MenuItem::linkto(TeamCrudController::class, 'Equipes', 'fas fa-users');
         yield MenuItem::linkto(TeamMemberCrudController::class, 'Joueurs', 'fa fa-futbol-o');
         yield MenuItem::linkto(MembershipCrudController::class, 'Adhésions', 'fa fa-id-card-o');
         yield MenuItem::linkto(SeasonCrudController::class, 'Saison', 'fas fa-trophy');
-        yield MenuItem::linkto(EventsCrudController::class, 'Calendrier', 'fa fa-calendar-o');       
-    
+        yield MenuItem::linkto(EventsCrudController::class, 'Evenements', 'fa fa-calendar-o');
     }
 }
